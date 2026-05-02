@@ -4,24 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sianna Travel | Sistema de Gestión de Viajes</title>
-    <!-- Tailwind CSS para diseño moderno y ligero -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
-        body { font-family: 'Inter', sans-serif; }
+        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
         .hero-section {
             background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1506929562872-bb421503ef21?auto=format&fit=crop&w=1920&q=80');
             background-size: cover;
             background-position: center;
         }
-        /* Optimización de velocidad: Imágenes con carga diferida y transiciones ligeras */
         .card-transition { transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-900">
 
-    <!-- 1. Header & Trust Signals -->
+    <!-- 1. Header & Navegación -->
     <nav class="bg-white shadow-sm sticky top-0 z-50">
         <div class="container mx-auto px-4 py-3 flex justify-between items-center">
             <div class="flex items-center space-x-2">
@@ -32,27 +30,27 @@
                 <span><i class="fas fa-shield-alt text-green-500 mr-1"></i> Conexión Segura SSL</span>
                 <span><i class="fas fa-bolt text-yellow-500 mr-1"></i> Tulancingo Local</span>
             </div>
-            <a href="#contacto" class="bg-blue-600 text-white px-5 py-2 rounded-lg font-bold text-sm hover:bg-blue-700 transition">Contactar</a>
+            <a href="https://wa.me/5217750000000" class="bg-blue-600 text-white px-5 py-2 rounded-lg font-bold text-sm hover:bg-blue-700 transition">Contactar Agencia</a>
         </div>
     </nav>
 
-    <!-- 2. Hero con Enfoque en Conversión -->
+    <!-- 2. Hero Section -->
     <header class="hero-section h-[500px] flex items-center justify-center text-center text-white">
         <div class="px-4">
-            <h1 class="text-4xl md:text-6xl font-black mb-4">No solo viajes, vive experiencias</h1>
-            <p class="text-lg md:text-xl mb-8 max-w-2xl mx-auto font-light">Tu próximo destino está a un clic. Sistema optimizado para consultas rápidas y seguras.</p>
-            <a href="#buscador" class="bg-white text-blue-900 px-8 py-4 rounded-full font-black hover:bg-blue-100 transition shadow-xl">Comenzar Búsqueda</a>
+            <h1 class="text-4xl md:text-6xl font-black mb-4 uppercase tracking-tighter">No solo viajes, vive experiencias</h1>
+            <p class="text-lg md:text-xl mb-8 max-w-2xl mx-auto font-light italic">Tu próximo destino está a un clic. Sistema optimizado para consultas rápidas y seguras.</p>
+            <a href="#buscador" class="bg-white text-blue-900 px-8 py-4 rounded-full font-black hover:bg-blue-100 transition shadow-xl uppercase text-sm tracking-widest">Comenzar Búsqueda</a>
         </div>
     </header>
 
-    <!-- 3. GESTIÓN DE VENTAS: Buscador con Filtros (Funcionalidad Prometida) -->
+    <!-- 3. GESTIÓN DE VENTAS: Buscador -->
     <section id="buscador" class="py-12 container mx-auto px-4 -mt-16 relative z-10">
-        <div class="bg-white p-6 rounded-3xl shadow-2xl border border-slate-100">
-            <h3 class="text-slate-500 text-xs font-black uppercase mb-4 tracking-widest text-center">Herramienta de Filtrado Inteligente</h3>
+        <div class="bg-white p-8 rounded-3xl shadow-2xl border border-slate-100">
+            <h3 class="text-slate-500 text-[10px] font-black uppercase mb-6 tracking-[0.3em] text-center">Herramienta de Filtrado Inteligente</h3>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div class="space-y-2">
-                    <label class="text-sm font-bold text-slate-700"><i class="fas fa-map-marker-alt mr-2 text-blue-600"></i>Destino</label>
-                    <select class="w-full p-3 bg-slate-100 rounded-xl border-none outline-none font-medium">
+                    <label class="text-xs font-bold text-slate-700 uppercase tracking-wider">Destino</label>
+                    <select class="w-full p-3 bg-slate-100 rounded-xl border-none outline-none font-medium text-sm">
                         <option>Todos los destinos</option>
                         <option>Punta Cana</option>
                         <option>Cancún / Riviera Maya</option>
@@ -60,8 +58,8 @@
                     </select>
                 </div>
                 <div class="space-y-2">
-                    <label class="text-sm font-bold text-slate-700"><i class="fas fa-wallet mr-2 text-blue-600"></i>Presupuesto Máximo</label>
-                    <select class="w-full p-3 bg-slate-100 rounded-xl border-none outline-none font-medium">
+                    <label class="text-xs font-bold text-slate-700 uppercase tracking-wider">Presupuesto Máximo</label>
+                    <select class="w-full p-3 bg-slate-100 rounded-xl border-none outline-none font-medium text-sm">
                         <option>Cualquier presupuesto</option>
                         <option>Menos de $15,000 MXN</option>
                         <option>$15,000 - $30,000 MXN</option>
@@ -69,78 +67,86 @@
                     </select>
                 </div>
                 <div class="flex items-end">
-                    <button class="w-full bg-blue-600 text-white py-3 rounded-xl font-bold hover:bg-blue-700 transition flex items-center justify-center">
-                        <i class="fas fa-search mr-2"></i> Filtrar Viajes
+                    <button class="w-full bg-blue-600 text-white py-3.5 rounded-xl font-bold hover:bg-blue-700 transition flex items-center justify-center shadow-lg shadow-blue-200">
+                        <i class="fas fa-search mr-2 text-xs"></i> FILTRAR VIAJES
                     </button>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 4. OPTIMIZACIÓN Y VELOCIDAD: Catálogo Responsivo -->
+    <!-- 4. CATÁLOGO DE VIAJES -->
     <section class="py-16 container mx-auto px-4">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <!-- Card Viaje -->
-            <div class="bg-white rounded-2xl shadow-lg overflow-hidden card-transition hover:-translate-y-2">
-                <img src="https://images.unsplash.com/photo-1544919933-72202685764d?auto=format&fit=crop&w=800&q=80" class="w-full h-48 object-cover">
-                <div class="p-6">
-                    <div class="flex justify-between items-center mb-2">
-                        <span class="text-xs font-black text-blue-600 uppercase italic">All Inclusive</span>
+            <div class="bg-white rounded-3xl shadow-lg overflow-hidden card-transition hover:-translate-y-2 border border-slate-100">
+                <img src="https://images.unsplash.com/photo-1544919933-72202685764d?auto=format&fit=crop&w=800&q=80" class="w-full h-56 object-cover">
+                <div class="p-8">
+                    <div class="flex justify-between items-center mb-3">
+                        <span class="text-[10px] font-black text-blue-600 uppercase tracking-widest italic">All Inclusive</span>
                         <span class="bg-green-100 text-green-700 text-[10px] px-2 py-1 rounded-md font-bold uppercase">Disponible</span>
                     </div>
-                    <h4 class="text-xl font-bold mb-4">Punta Cana: Playa Bávaro</h4>
-                    <ul class="text-xs text-slate-500 space-y-2 mb-6">
-                        <li><i class="fas fa-calendar-check mr-2"></i> Salida: 20 de Abril, 2026</li>
-                        <li><i class="fas fa-plane mr-2"></i> Vuelo redondo + Traslados</li>
-                        <li><i class="fas fa-hotel mr-2"></i> Hotel 5 Estrellas</li>
+                    <h4 class="text-xl font-bold mb-4 tracking-tight">Punta Cana: Playa Bávaro</h4>
+                    <ul class="text-xs text-slate-500 space-y-3 mb-8">
+                        <li><i class="fas fa-calendar-check mr-2 text-blue-500"></i> Salida: 20 de Abril, 2026</li>
+                        <li><i class="fas fa-plane mr-2 text-blue-500"></i> Vuelo redondo + Traslados</li>
+                        <li><i class="fas fa-hotel mr-2 text-blue-500"></i> Hotel 5 Estrellas</li>
                     </ul>
-                    <div class="flex justify-between items-center pt-4 border-t border-slate-50">
-                        <span class="text-2xl font-black text-slate-800">$18,500 <small class="text-xs text-slate-400">MXN</small></span>
-                        <a href="https://wa.me/5217750000000" class="bg-green-500 text-white p-3 rounded-xl hover:bg-green-600">
-                            <i class="fab fa-whatsapp"></i>
+                    <div class="flex justify-between items-center pt-6 border-t border-slate-50">
+                        <span class="text-2xl font-black text-slate-800">$18,500 <small class="text-xs text-slate-400 font-normal underline">MXN</small></span>
+                        <a href="https://wa.me/5217750000000" class="bg-green-500 text-white w-12 h-12 rounded-2xl flex items-center justify-center hover:bg-green-600 transition shadow-lg shadow-green-100">
+                            <i class="fab fa-whatsapp text-xl"></i>
                         </a>
                     </div>
                 </div>
             </div>
-            <!-- Más cards se pueden añadir aquí -->
         </div>
     </section>
 
-    <!-- 5. ESCALABILIDAD Y SEGURIDAD: Panel Técnico (Sello Luis Angel) -->
-    <section class="bg-slate-900 py-20 text-white">
+    <!-- 5. PANEL DE INFRAESTRUCTURA (Sin tarjeta de desarrollo) -->
+    <section class="bg-slate-900 py-24 text-white">
         <div class="container mx-auto px-4">
-            <div class="grid md:grid-cols-2 gap-16 items-center">
-                <div>
-                    <h2 class="text-3xl font-black mb-6 italic">Infraestructura Digital de Alta Disponibilidad</h2>
-                    <p class="text-slate-400 mb-8 font-light">Este sistema ha sido diseñado pensando en el crecimiento de Sianna Travel. Como estudiante de sistemas y redes, he implementado:</p>
-                    <div class="space-y-6 text-sm">
-                        <div class="flex items-center space-x-4">
-                            <div class="bg-blue-600/20 p-3 rounded-full text-blue-400"><i class="fas fa-code-branch"></i></div>
-                            <div><strong>Arquitectura Escalable:</strong> Preparada para integrar pasarelas de pago y CRM en el futuro.</div>
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-black mb-8 italic tracking-tighter">Infraestructura Digital de Alta Disponibilidad</h2>
+                <p class="text-slate-400 mb-12 text-lg font-light leading-relaxed">Como estudiante de sistemas y redes, he diseñado esta plataforma bajo tres pilares tecnológicos para asegurar el éxito de Sianna Travel:</p>
+                
+                <div class="grid md:grid-cols-3 gap-12 text-left">
+                    <div class="space-y-4">
+                        <div class="bg-blue-600 w-12 h-12 rounded-2xl flex items-center justify-center text-xl shadow-lg shadow-blue-500/20">
+                            <i class="fas fa-code-branch"></i>
                         </div>
-                        <div class="flex items-center space-x-4">
-                            <div class="bg-blue-600/20 p-3 rounded-full text-blue-400"><i class="fas fa-tachometer-alt"></i></div>
-                            <div><strong>Optimización de Carga:</strong> Código limpio y optimizado para una respuesta instantánea en móviles.</div>
-                        </div>
-                        <div class="flex items-center space-x-4">
-                            <div class="bg-blue-600/20 p-3 rounded-full text-blue-400"><i class="fas fa-user-shield"></i></div>
-                            <div><strong>Seguridad de Datos:</strong> Estándares SSL para proteger la confianza de sus viajeros.</div>
-                        </div>
+                        <h4 class="font-bold text-xl">Arquitectura Escalable</h4>
+                        <p class="text-slate-500 text-sm leading-relaxed">Estructura preparada para integrar futuras pasarelas de pago y sistemas CRM sin reconstruir el sitio.</p>
                     </div>
-                </div>
-                <div class="bg-white/5 p-8 rounded-[3rem] border border-white/10 text-center">
-                    <i class="fas fa-laptop-code text-6xl text-blue-500 mb-6"></i>
-                    <h5 class="text-xl font-bold mb-2">Desarrollo Profesional</h5>
-                    <p class="text-slate-500 italic mb-6">"Mi objetivo es convertir la tecnología en su mejor aliada para vender más y mejor en Tulancingo."</p>
-                    <span class="block text-blue-400 font-bold uppercase tracking-widest text-xs">Luis Angel Povedano Lopez</span>
-                    <span class="text-[10px] text-slate-600 uppercase">Estudiante de Sistemas y Redes</span>
+
+                    <div class="space-y-4">
+                        <div class="bg-blue-600 w-12 h-12 rounded-2xl flex items-center justify-center text-xl shadow-lg shadow-blue-500/20">
+                            <i class="fas fa-tachometer-alt"></i>
+                        </div>
+                        <h4 class="font-bold text-xl">Carga Optimizada</h4>
+                        <p class="text-slate-500 text-sm leading-relaxed">Código depurado para garantizar una velocidad de respuesta instantánea, vital para ventas en dispositivos móviles.</p>
+                    </div>
+
+                    <div class="space-y-4">
+                        <div class="bg-blue-600 w-12 h-12 rounded-2xl flex items-center justify-center text-xl shadow-lg shadow-blue-500/20">
+                            <i class="fas fa-user-shield"></i>
+                        </div>
+                        <h4 class="font-bold text-xl">Seguridad de Datos</h4>
+                        <p class="text-slate-500 text-sm leading-relaxed">Implementación de estándares de seguridad para proteger la integridad de las consultas de sus viajeros.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer class="py-12 bg-white border-t border-slate-100 text-center text-slate-400 text-xs">
-        <p>© 2026 Sianna Travel - Tulancingo, Hidalgo. Todos los derechos reservados.</p>
+    <!-- 6. Footer -->
+    <footer class="py-12 bg-white border-t border-slate-100">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+            <p class="text-slate-400 text-[10px] font-bold uppercase tracking-widest">© 2026 Sianna Travel - Tulancingo, Hidalgo</p>
+            <div class="text-center md:text-right">
+                <p class="text-[10px] text-slate-300 font-black uppercase tracking-[0.2em]">Desarrollo de Sistemas</p>
+                <p class="text-xs font-bold text-slate-400 italic">Luis Angel Povedano Lopez</p>
+            </div>
+        </div>
     </footer>
 
 </body>
