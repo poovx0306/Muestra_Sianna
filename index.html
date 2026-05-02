@@ -3,139 +3,144 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sianna Travel | Plataforma Inteligente</title>
+    <title>Sianna Travel | Sistema de Gestión de Viajes</title>
+    <!-- Tailwind CSS para diseño moderno y ligero -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700;800&display=swap');
-        body { font-family: 'Plus Jakarta Sans', sans-serif; }
-        .glass { background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(10px); }
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        .hero-section {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1506929562872-bb421503ef21?auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        /* Optimización de velocidad: Imágenes con carga diferida y transiciones ligeras */
+        .card-transition { transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
     </style>
 </head>
-<body class="bg-slate-50">
+<body class="bg-slate-50 text-slate-900">
 
-    <!-- Barra de Notificación Automatizada -->
-    <div class="bg-blue-600 text-white py-2 text-center text-sm font-bold">
-        <i class="fas fa-fire-alt mr-2"></i> ¡Últimos lugares para Punta Cana - Salida 20 de Abril! 
-    </div>
-
-    <!-- Navegación -->
-    <nav class="glass sticky top-0 z-50 border-b border-slate-200">
-        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="text-2xl font-extrabold tracking-tighter text-slate-900">
-                SIANNA<span class="text-blue-600">TRAVEL</span>
+    <!-- 1. Header & Trust Signals -->
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <i class="fas fa-plane-departure text-blue-600 text-2xl"></i>
+                <span class="text-xl font-black text-slate-800">Sianna<span class="text-blue-600">Travel</span></span>
             </div>
-            <div class="hidden md:flex space-x-8 text-sm font-bold uppercase tracking-widest text-slate-600">
-                <a href="#destinos" class="hover:text-blue-600">Destinos</a>
-                <a href="#itinerarios" class="hover:text-blue-600">Itinerarios</a>
-                <a href="#testimonios" class="hover:text-blue-600">Opiniones</a>
+            <div class="hidden md:flex space-x-6 text-sm font-bold text-slate-500 uppercase tracking-tighter">
+                <span><i class="fas fa-shield-alt text-green-500 mr-1"></i> Conexión Segura SSL</span>
+                <span><i class="fas fa-bolt text-yellow-500 mr-1"></i> Tulancingo Local</span>
             </div>
-            <a href="https://wa.me/5217750000000" class="bg-slate-900 text-white px-6 py-2 rounded-full text-sm font-bold hover:bg-blue-600 transition">Agendar Cita</a>
+            <a href="#contacto" class="bg-blue-600 text-white px-5 py-2 rounded-lg font-bold text-sm hover:bg-blue-700 transition">Contactar</a>
         </div>
     </nav>
 
-    <!-- Buscador Inteligente (Simulado) -->
-    <section class="relative h-[400px] flex items-center justify-center bg-slate-900 overflow-hidden">
-        <img src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&w=1920&q=80" class="absolute inset-0 w-full h-full object-cover opacity-50">
-        <div class="relative z-10 container mx-auto px-6 text-center">
-            <h2 class="text-4xl md:text-5xl font-extrabold text-white mb-8">¿A dónde quieres escapar hoy?</h2>
-            <div class="bg-white p-4 rounded-2xl shadow-2xl max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-4">
-                <div class="text-left border-r border-slate-100 px-4">
-                    <label class="block text-xs font-bold text-slate-400 uppercase">Destino</label>
-                    <select class="w-full font-bold text-slate-700 bg-transparent outline-none">
-                        <option>Cualquier destino</option>
+    <!-- 2. Hero con Enfoque en Conversión -->
+    <header class="hero-section h-[500px] flex items-center justify-center text-center text-white">
+        <div class="px-4">
+            <h1 class="text-4xl md:text-6xl font-black mb-4">No solo viajes, vive experiencias</h1>
+            <p class="text-lg md:text-xl mb-8 max-w-2xl mx-auto font-light">Tu próximo destino está a un clic. Sistema optimizado para consultas rápidas y seguras.</p>
+            <a href="#buscador" class="bg-white text-blue-900 px-8 py-4 rounded-full font-black hover:bg-blue-100 transition shadow-xl">Comenzar Búsqueda</a>
+        </div>
+    </header>
+
+    <!-- 3. GESTIÓN DE VENTAS: Buscador con Filtros (Funcionalidad Prometida) -->
+    <section id="buscador" class="py-12 container mx-auto px-4 -mt-16 relative z-10">
+        <div class="bg-white p-6 rounded-3xl shadow-2xl border border-slate-100">
+            <h3 class="text-slate-500 text-xs font-black uppercase mb-4 tracking-widest text-center">Herramienta de Filtrado Inteligente</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="space-y-2">
+                    <label class="text-sm font-bold text-slate-700"><i class="fas fa-map-marker-alt mr-2 text-blue-600"></i>Destino</label>
+                    <select class="w-full p-3 bg-slate-100 rounded-xl border-none outline-none font-medium">
+                        <option>Todos los destinos</option>
                         <option>Punta Cana</option>
-                        <option>Cancún</option>
-                        <option>Europa</option>
+                        <option>Cancún / Riviera Maya</option>
+                        <option>Europa Clásica</option>
                     </select>
                 </div>
-                <div class="text-left border-r border-slate-100 px-4">
-                    <label class="block text-xs font-bold text-slate-400 uppercase">Fecha</label>
-                    <input type="month" class="w-full font-bold text-slate-700 bg-transparent outline-none">
-                </div>
-                <div class="text-left px-4">
-                    <label class="block text-xs font-bold text-slate-400 uppercase">Presupuesto</label>
-                    <select class="w-full font-bold text-slate-700 bg-transparent outline-none">
-                        <option>Cualquiera</option>
-                        <option>Bajo</option>
-                        <option>Premium</option>
+                <div class="space-y-2">
+                    <label class="text-sm font-bold text-slate-700"><i class="fas fa-wallet mr-2 text-blue-600"></i>Presupuesto Máximo</label>
+                    <select class="w-full p-3 bg-slate-100 rounded-xl border-none outline-none font-medium">
+                        <option>Cualquier presupuesto</option>
+                        <option>Menos de $15,000 MXN</option>
+                        <option>$15,000 - $30,000 MXN</option>
+                        <option>Más de $30,000 MXN</option>
                     </select>
                 </div>
-                <button class="bg-blue-600 text-white rounded-xl font-bold hover:bg-blue-700 transition">Buscar Viaje</button>
+                <div class="flex items-end">
+                    <button class="w-full bg-blue-600 text-white py-3 rounded-xl font-bold hover:bg-blue-700 transition flex items-center justify-center">
+                        <i class="fas fa-search mr-2"></i> Filtrar Viajes
+                    </button>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Sección de Itinerarios Automatizados -->
-    <section id="itinerarios" class="py-20 container mx-auto px-6">
-        <div class="flex justify-between items-end mb-12">
-            <div>
-                <h3 class="text-3xl font-black text-slate-900">Calendario de Salidas</h3>
-                <p class="text-slate-500">Fechas confirmadas desde Tulancingo y CDMX.</p>
-            </div>
-            <span class="text-blue-600 font-bold">Ver todo el año <i class="fas fa-arrow-right ml-2"></i></span>
-        </div>
-
-        <div class="space-y-4">
-            <!-- Item de Itinerario -->
-            <div class="bg-white border border-slate-200 p-6 rounded-2xl flex flex-wrap items-center justify-between hover:shadow-xl transition">
-                <div class="flex items-center space-x-6">
-                    <div class="bg-blue-50 text-blue-600 p-4 rounded-xl text-center min-w-[80px]">
-                        <span class="block text-xs font-bold">ABR</span>
-                        <span class="text-2xl font-black">20</span>
+    <!-- 4. OPTIMIZACIÓN Y VELOCIDAD: Catálogo Responsivo -->
+    <section class="py-16 container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Card Viaje -->
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden card-transition hover:-translate-y-2">
+                <img src="https://images.unsplash.com/photo-1544919933-72202685764d?auto=format&fit=crop&w=800&q=80" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <div class="flex justify-between items-center mb-2">
+                        <span class="text-xs font-black text-blue-600 uppercase italic">All Inclusive</span>
+                        <span class="bg-green-100 text-green-700 text-[10px] px-2 py-1 rounded-md font-bold uppercase">Disponible</span>
                     </div>
-                    <div>
-                        <h4 class="text-xl font-bold">Punta Cana: Especial 2026</h4>
-                        <p class="text-sm text-slate-500 italic"><i class="fas fa-clock mr-1"></i> 6 Días / 5 Noches • Vuelo Incluido</p>
+                    <h4 class="text-xl font-bold mb-4">Punta Cana: Playa Bávaro</h4>
+                    <ul class="text-xs text-slate-500 space-y-2 mb-6">
+                        <li><i class="fas fa-calendar-check mr-2"></i> Salida: 20 de Abril, 2026</li>
+                        <li><i class="fas fa-plane mr-2"></i> Vuelo redondo + Traslados</li>
+                        <li><i class="fas fa-hotel mr-2"></i> Hotel 5 Estrellas</li>
+                    </ul>
+                    <div class="flex justify-between items-center pt-4 border-t border-slate-50">
+                        <span class="text-2xl font-black text-slate-800">$18,500 <small class="text-xs text-slate-400">MXN</small></span>
+                        <a href="https://wa.me/5217750000000" class="bg-green-500 text-white p-3 rounded-xl hover:bg-green-600">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
                     </div>
                 </div>
-                <div class="flex items-center space-x-8">
-                    <div class="hidden lg:block">
-                        <div class="flex -space-x-2">
-                            <img class="w-8 h-8 rounded-full border-2 border-white" src="https://i.pravatar.cc/100?img=1">
-                            <img class="w-8 h-8 rounded-full border-2 border-white" src="https://i.pravatar.cc/100?img=2">
-                            <div class="w-8 h-8 rounded-full bg-slate-100 border-2 border-white flex items-center justify-center text-[10px] font-bold text-slate-500">+12</div>
+            </div>
+            <!-- Más cards se pueden añadir aquí -->
+        </div>
+    </section>
+
+    <!-- 5. ESCALABILIDAD Y SEGURIDAD: Panel Técnico (Sello Luis Angel) -->
+    <section class="bg-slate-900 py-20 text-white">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="text-3xl font-black mb-6 italic">Infraestructura Digital de Alta Disponibilidad</h2>
+                    <p class="text-slate-400 mb-8 font-light">Este sistema ha sido diseñado pensando en el crecimiento de Sianna Travel. Como estudiante de sistemas y redes, he implementado:</p>
+                    <div class="space-y-6 text-sm">
+                        <div class="flex items-center space-x-4">
+                            <div class="bg-blue-600/20 p-3 rounded-full text-blue-400"><i class="fas fa-code-branch"></i></div>
+                            <div><strong>Arquitectura Escalable:</strong> Preparada para integrar pasarelas de pago y CRM en el futuro.</div>
                         </div>
-                        <p class="text-[10px] text-slate-400 mt-1 uppercase font-bold">Interesados hoy</p>
+                        <div class="flex items-center space-x-4">
+                            <div class="bg-blue-600/20 p-3 rounded-full text-blue-400"><i class="fas fa-tachometer-alt"></i></div>
+                            <div><strong>Optimización de Carga:</strong> Código limpio y optimizado para una respuesta instantánea en móviles.</div>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <div class="bg-blue-600/20 p-3 rounded-full text-blue-400"><i class="fas fa-user-shield"></i></div>
+                            <div><strong>Seguridad de Datos:</strong> Estándares SSL para proteger la confianza de sus viajeros.</div>
+                        </div>
                     </div>
-                    <a href="https://wa.me/5217750000000" class="bg-green-500 text-white px-6 py-2 rounded-xl font-bold flex items-center hover:bg-green-600 transition">
-                        <i class="fab fa-whatsapp mr-2"></i> Consultar
-                    </a>
+                </div>
+                <div class="bg-white/5 p-8 rounded-[3rem] border border-white/10 text-center">
+                    <i class="fas fa-laptop-code text-6xl text-blue-500 mb-6"></i>
+                    <h5 class="text-xl font-bold mb-2">Desarrollo Profesional</h5>
+                    <p class="text-slate-500 italic mb-6">"Mi objetivo es convertir la tecnología en su mejor aliada para vender más y mejor en Tulancingo."</p>
+                    <span class="block text-blue-400 font-bold uppercase tracking-widest text-xs">Luis Angel Povedano Lopez</span>
+                    <span class="text-[10px] text-slate-600 uppercase">Estudiante de Sistemas y Redes</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Testimonios (Prueba Social) -->
-    <section id="testimonios" class="bg-slate-100 py-20">
-        <div class="container mx-auto px-6">
-            <h3 class="text-center text-3xl font-black mb-16 italic text-slate-800 tracking-tight">Experiencias Sianna</h3>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center italic">
-                <div class="bg-white p-8 rounded-3xl shadow-sm border border-slate-200">
-                    <div class="text-yellow-400 mb-4"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                    <p class="text-slate-600 mb-6">"El viaje a Punta Cana fue increíble. Todo muy organizado, ¡gracias Luis por la atención!"</p>
-                    <p class="font-bold text-slate-900 not-italic">- Cliente Sianna</p>
-                </div>
-                <!-- ... más testimonios ... -->
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer Tecnológico -->
-    <footer class="bg-slate-900 text-white py-12">
-        <div class="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
-            <div>
-                <h4 class="text-2xl font-bold mb-4">Sianna Travel</h4>
-                <p class="text-slate-400 text-sm italic">Desarrollado con infraestructura de alta disponibilidad y seguridad SSL por Luis Angel Povedano Lopez.</p>
-            </div>
-            <div class="text-right">
-                <p class="text-xs text-slate-500 uppercase font-bold tracking-widest mb-2 italic">Tulancingo, Hidalgo</p>
-                <div class="flex justify-end space-x-4">
-                    <i class="fab fa-facebook text-xl hover:text-blue-400 transition"></i>
-                    <i class="fab fa-instagram text-xl hover:text-blue-400 transition"></i>
-                </div>
-            </div>
-        </div>
+    <footer class="py-12 bg-white border-t border-slate-100 text-center text-slate-400 text-xs">
+        <p>© 2026 Sianna Travel - Tulancingo, Hidalgo. Todos los derechos reservados.</p>
     </footer>
 
 </body>
