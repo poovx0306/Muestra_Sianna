@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sianna Travel | Propuesta de Luis Angel</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .hero-bg {
+            background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1540202404-a2f290328294?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 font-sans">
+
+    <!-- Navegación -->
+    <nav class="bg-white shadow-md p-4 sticky top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-bold text-blue-600">Sianna <span class="text-orange-500">Travel</span></h1>
+            <div class="hidden md:flex space-x-6 text-gray-600 font-medium">
+                <a href="#" class="hover:text-blue-500">Inicio</a>
+                <a href="#destinos" class="hover:text-blue-500">Destinos</a>
+                <a href="#contacto" class="hover:text-blue-500">Contacto</a>
+            </div>
+            <button class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">Cotizar Ahora</button>
+        </div>
+    </nav>
+
+    <!-- Hero Section (Aspiracional) -->
+    <header class="hero-bg h-[500px] flex items-center justify-center text-center text-white px-4">
+        <div>
+            <h2 class="text-4xl md:text-6xl font-bold mb-4">El viaje de tus sueños comienza aquí</h2>
+            <p class="text-lg md:text-xl mb-8">Expertos en experiencias inolvidables en Tulancingo y el mundo.</p>
+            <a href="#destinos" class="bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-8 rounded-full transition duration-300">Explorar Destinos</a>
+        </div>
+    </header>
+
+    <!-- Destinos Destacados (Lógica de Portafolio) -->
+    <section id="destinos" class="container mx-auto py-16 px-4">
+        <h3 class="text-3xl font-bold text-center text-gray-800 mb-12">Nuestros Destinos Estrella</h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            
+            <!-- Card 1: Punta Cana -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition">
+                <img src="https://images.unsplash.com/photo-1544919933-72202685764d?auto=format&fit=crop&w=800&q=80" alt="Punta Cana" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <span class="text-blue-500 text-sm font-bold uppercase">All Inclusive</span>
+                    <h4 class="text-xl font-bold my-2">Punta Cana, Rep. Dominicana</h4>
+                    <p class="text-gray-600 text-sm mb-4">Disfruta de las mejores playas del Caribe con todo incluido.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-2xl font-bold text-gray-800">$18,500 <small class="text-sm">MXN</small></span>
+                        <a href="https://wa.me/5217750000000?text=Hola%20Sianna%20Travel,%20me%20interesa%20el%20paquete%20a%20Punta%20Cana" class="text-green-500 hover:text-green-600"><i class="fab fa-whatsapp fa-2x"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2: Cancún -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition">
+                <img src="https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?auto=format&fit=crop&w=800&q=80" alt="Cancún" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <span class="text-blue-500 text-sm font-bold uppercase">Nacional</span>
+                    <h4 class="text-xl font-bold my-2">Cancún, México</h4>
+                    <p class="text-gray-600 text-sm mb-4">Aguas cristalinas y la mejor vida nocturna del país.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-2xl font-bold text-gray-800">$12,400 <small class="text-sm">MXN</small></span>
+                        <a href="#" class="text-green-500"><i class="fab fa-whatsapp fa-2x"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3: Europa -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition">
+                <img src="https://images.unsplash.com/photo-1493397212122-2b85edf8106b?auto=format&fit=crop&w=800&q=80" alt="Europa" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <span class="text-blue-500 text-sm font-bold uppercase">Internacional</span>
+                    <h4 class="text-xl font-bold my-2">Tour Europa Clásica</h4>
+                    <p class="text-gray-600 text-sm mb-4">Visita Madrid, París y Roma en un solo viaje inolvidable.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-2xl font-bold text-gray-800">$45,000 <small class="text-sm">MXN</small></span>
+                        <a href="#" class="text-green-500"><i class="fab fa-whatsapp fa-2x"></i></a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Por qué elegirnos (Ventaja técnica de Luis) -->
+    <section class="bg-blue-900 text-white py-16">
+        <div class="container mx-auto px-4 text-center">
+            <h3 class="text-3xl font-bold mb-8">Tecnología y Confianza</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                <div>
+                    <i class="fas fa-shield-halved text-5xl mb-4 text-orange-400"></i>
+                    <h5 class="text-xl font-bold mb-2">Seguridad SSL</h5>
+                    <p class="text-gray-300">Infraestructura protegida para la seguridad de sus datos.</p>
+                </div>
+                <div>
+                    <i class="fas fa-mobile-screen-button text-5xl mb-4 text-orange-400"></i>
+                    <h5 class="text-xl font-bold mb-2">Optimización Móvil</h5>
+                    <p class="text-gray-300">Navegación fluida y rápida desde cualquier smartphone.</p>
+                </div>
+                <div>
+                    <i class="fas fa-headset text-5xl mb-4 text-orange-400"></i>
+                    <h5 class="text-xl font-bold mb-2">Soporte Local</h5>
+                    <p class="text-gray-300">Asistencia técnica directa aquí en Tulancingo.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-gray-400 py-8 px-4 text-center">
+        <p>© 2026 Sianna Travel - Propuesta desarrollada por <strong>Luis Angel Povedano Lopez</strong></p>
+    </footer>
+
+</body>
+</html>
